@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+	<header>
+		<title>Port Mirroring Scheduling</title>
+		<link rel="stylesheet" type="text/css" href="{{ static_url('css/style.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ static_url('css/jquery-ui.css') }}">
+		<script src="./static/js/jquery-3.2.1.js"></script>
+		<script src="./static/js/jquery-ui.js"></script>
+		<script src="./static/js/ready.js"></script>
+	</header>
+	
+	<body style="background-color: #5B0688">
+		<div id="main_win">
+
+			<b><label class="A">Aggregator Router</label></b><br>
+				<select class="A" type="text" id="CA_drpA" name="CA_drp_v" style="width: 140px; text-align: center">
+					{% for ca in CAs %}
+						<option>{{ ca }}</option>
+					{% end %}
+				</select><br><br>
+			<b><label class="A">Schedule Overview</label></b>
+
+			<div id="tbl_wrapper">
+				<div id="tbl_scrol"><br>
+					<table id="tbl_scl">
+						<thead></thead>
+						<tbody>
+							<tr>
+								<td id="{{ list_days[0] }}" width="30px">{{ list_days[0] }}</td>
+							</tr>
+							<tr>
+								<td id="{{ list_days[1] }}" width="30px">{{ list_days[1] }}</td>
+							</tr>
+							<tr>
+								<td id="{{ list_days[2] }}" width="30px">{{ list_days[2] }}</td>
+							</tr>
+							<tr>
+								<td id="{{ list_days[3] }}" width="30px">{{ list_days[3] }}</td>
+							</tr>
+							<tr>
+								<td id="{{ list_days[4] }}" width="30px">{{ list_days[4] }}</td>
+							</tr>
+							<tr>
+								<td id="{{ list_days[5] }}" width="30px">{{ list_days[5] }}</td>
+							</tr>
+							<tr>
+								<td id="{{ list_days[6] }}" width="30px">{{ list_days[6] }}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<br>
+			<div id="sec_set">
+				<form id="form" action="/form">
+					<fieldset>
+					<legend>CAs Schedule Setting</legend>
+								<div id="div-col1" style="width: 150px; text-align: center">
+									<label>Aggregator Router</label><br>
+
+									<select type="text" id="CA_drpB" class="dropbox" name="CA_drpBx"><br>
+										{% for ca in CAs %}
+											<option>{{ ca }}</option>
+										{% end %}
+									</select><br>
+									<p></p>
+									<label>Interface</label><br>
+
+									<select type="text" id="RE_drpB" class="dropbox" name="RE_drpBx" required></select><br>
+									<p></p>
+									<label>From</label><br>
+									<input type="text" id="datepicker1" class="datetxtbx" name="txtbx_date_S" value="{{ date_value }}" readonly /><br>
+									<label >To</label><br>
+									<input type="text" id="datepicker2" class="datetxtbx" name="txtbx_date_E" value="{{ date_value }}" readonly ><br>
+									<p></p>
+									<p></p>
+									<div style="margin-left: 30px ; text-align: left">
+									<input id="adhoc" type="radio" value="Adhoc" name="radio" checked>Adhoc<br>
+									<input id="daily" type="radio" value="Daily" name="radio">Daily<br>
+									</div>
+									<p></p>
+									<p></p>
+
+									<label>Start Time</label><br>
+									<input id="tts" class="txtbx" name="txtbx_SH" type="number" min="00" max="24" value="{{ time_value }}" required ><br>
+									<label>End Time</label><br>
+									<input id="tte" class="txtbx" name="txtbx_EH" type="number" min="00" max="24" value="{{ time_value }}" required ><br>
+									<p></p>
+									<p></p>
+									<input type="submit" id="btn_add" style="width: 100px" value="Add">
+								</div>
+								<div id="div-col2" style="width: 700px">
+									<div id="prv_wrapper" style="margin-top: 12px">
+										<div id="prv_scrol" style=" margin-top: 12px">
+											<div id="result" style="color: #D70E0A; font-size: 18px"></div>
+											<div id="result1" style=" font-size: 14px"></div>
+											<label style="margin-left: 40px"><B>Preview</B></label>
+											<table id="tbl_schl" style="width:100%">
+                                                <tr><th>CA name</th><th>Interface</th><th>From</th><th>To</th><th>Type</th><th>Start time</th><th>End time</th><th>Delete</th></tr>
+											</table><br>
+											<button style="margin-left: 40px; width: 100px" id="btn_sbmt" name="schl_arr">Submit</button>
+										</div><br>
+
+									</div>
+								</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
