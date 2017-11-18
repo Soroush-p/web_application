@@ -1,1 +1,1 @@
-dependencies tornado, fasteners
+dependencies tornado and fasteners python libraries
