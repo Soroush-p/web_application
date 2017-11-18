@@ -1,0 +1,6 @@
+<Nodes>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Name,Site,Function,Protected,Active,Type,ISISArea,AS,BGPID,SID,AvoidTransit,IPAddress,Description,Vendor,Model,OS,IPManage,CostInitial,CostPerPeriod,LastTemplateUpdate,Longitude,Latitude,Failed,Tags,NetIntSNMP_Error,NetIntSource,NetIntRE0CPU1m,NetIntRE0CPU5m,NetIntRE0Mem,NetIntRE1CPU1m,NetIntRE1CPU5m,NetIntRE1Mem
+EDTNABTFVCA01,,core,F,T,physical,49.0416,852,,,No,204.225.240.178,,Juniper,tx5000,JUNOS 14.2R3-S9,172.25.195.19,0,0,,-87.618531,41.854167,F,,,,,8,9,,0,8
+EDTNABTFVCA02,,core,F,T,physical,49.0416,852,154.11.0.131,,No,154.11.0.131,,Juniper,t4000,JUNOS 14.2R7.5,172.25.195.20,0,0,,-87.618531,41.854167,F,,,,,15,51,,2,41
+EDTNABTFVCA03,,core,F,T,physical,49.0416,852,,,No,204.225.240.179,,Juniper,tx5000,JUNOS 14.2R3-S9,172.25.195.21,0,0,,-87.629941,41.873336,F,,,,,7,8,,0,8
+EDTNABTFVCA04,,core,F,T,physical,49.0403,852,,,No,204.225.240.118,,Juniper,tx5000,JUNOS 14.2R3-S9,172.25.195.22,0,0,,-114.064254,51.046794,F,,,,,7,9,,0,8
